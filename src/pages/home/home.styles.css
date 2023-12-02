@@ -207,19 +207,119 @@
   flex-wrap: wrap;
 }
 
+.chef-header {
+  display: flex;
+  justify-content: center;
+}
 
 .recommended-header {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -8rem;
+  width: 58rem;
 }
 
 .recommended-header h1 {
   font-size: 3rem;
+  margin-left: -12rem;
 }
 
 .frying-pan-div {
   position: relative;
   margin-left: -15rem;
 }
+
+
+.restaurant-cusines {
+  margin-top: -5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.red-dot {
+  font-size: 5rem;
+  color: rgb(253, 99, 99);
+}
+.all-cusines-container {
+  display: flex;
+}
+
+.cusines-tags {
+  font-family: 'Dela Gothic One', cursive;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: transparent;
+  width: 100%;
+  margin: .5rem;
+  /* width: fit-content; */
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  z-index: 1;
+}
+
+.cusines-tags:hover {
+  background-color: #f9cb6f;
+}
+
+.listed-recipe-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.listed-recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+.events-section {
+  padding: 0 4%;
+}
+
+.explore-events {
+  height: 40rem;
+  border-radius: 20px;
+  margin: 4rem 0;
+  background-size: cover;
+  padding: 2rem 4rem;
+  color: rgb(255, 255, 255);
+
+  /* background-color: #000000; */
+}
+
+.explore-events h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.explore-events p {
+  margin-top: -2rem;
+}
+
+.book-ticks-now {
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  /* width: 0 2rem; */
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  width: 20rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.book-ticks-now:hover {
+  background: white;
+  color: #000000;
+
+}
+

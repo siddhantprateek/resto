@@ -2,9 +2,10 @@ import React from 'react';
 
 // internals
 import './home.styles.css';
-import { Header, Hero } from '../../components';
+import { Hero } from '../../components';
 import { AwardBadge, FoodItem, Testimony } from '../../components/common';
-import { ARROW, FOOD1, FRYING, UNDERLINE } from '../../assets';
+import { ARROW, CONCERT, FOOD1, FRYING, UNDERLINE } from '../../assets';
+import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
 
 
 const Home = () => {
@@ -62,7 +63,6 @@ const Home = () => {
           <Testimony />
           <Testimony />
           <Testimony />
-
         </div>
       </div>
 
@@ -84,15 +84,45 @@ const Home = () => {
 
       {/* Our Chef Special */}
       <div className="chef-recommended">
-        <div className="recommended-header">
-          <h1>Our Chefs Specials</h1>
-          <div className="frying-pan-div">
-            <img className='frying' src={FRYING} alt="" />
+        <div className="chef-header">
+          <div className="recommended-header">
+            <h1>Our Chefs Special <span className='red-dot'>.</span> </h1>
+            <div className="frying-pan-div">
+              <img className='frying' src={FRYING} alt="" />
+            </div>
           </div>
         </div>
-        
+        <div className="restaurant-cusines">
+          <div className="all-cusines-container">
+            <p className='cusines-tags'>Italian</p>
+            <p className='cusines-tags'>Chinese</p>
+            <p className='cusines-tags'>Korean</p>
+            <p className='cusines-tags'>Indian</p>
+
+          </div>
+        </div>
+        <div className="listed-recipe-container">
+          <div className="listed-recipes">
+            <RecipeItem />
+            <RecipeItem />
+            <RecipeItem />
+          </div>
+        </div>
       </div>
       {/* Events Section */}
+      <div className="events-section">
+        <div className="explore-events"
+          style={{
+            backgroundImage: `url('${CONCERT}')`
+          }}
+        >
+          <h1>Make your nights <br /> Memorable</h1>
+          <p>Book Tickets Now..., Enjoy the nights with top singers <br /> and artists around the country</p>
+          <button className="book-ticks-now">
+            Book Now!
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

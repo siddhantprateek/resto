@@ -4,7 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 // Internals
 import './App.css';
 import { Home } from './pages';
-import { Header } from './components';
+import { Header, Footer } from './components';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }
