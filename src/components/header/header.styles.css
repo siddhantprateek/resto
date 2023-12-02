@@ -1,0 +1,48 @@
+header {
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  height: 3rem;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.left-header h2 {
+  margin: 0 1rem;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-options li {
+  margin-left: 5rem;
+  font-size: 1.2rem;
+ 
+}
+
+.nav-options a {
+  text-decoration: none;
+  color: black;
+}
+
+.order-now-btn {
+  font-family: 'Dela Gothic One', cursive;
+  background-color: #f9cb6f;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.order-now-btn:hover {
+  background-color: transparent;
+}
