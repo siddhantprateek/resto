@@ -1,0 +1,47 @@
+
+.recipe-card {
+  width: 18rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.recipe-img {
+  width: 18rem;
+  border-radius: 15px;
+}
+
+.recipe-details {
+  margin-top: -2rem;
+  padding: 1rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.recipe-order-detials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-price {
+  text-align: right;
+}
+
+
+
+.order-now-button {
+  font-family: 'Dela Gothic One', cursive;
+  background-color: #f9cb6f;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  width: 100%;
+
+  /* width: fit-content; */
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.order-now-button:hover {
+  background-color: transparent;
+}
