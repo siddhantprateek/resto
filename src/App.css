@@ -88,6 +88,10 @@
   animation: TransitionLeft 5s;
 }
 
+.trans-from-right-less {
+  animation: TransitionLeft 1s;
+}
+
 
 
 .trans-from-buttom {

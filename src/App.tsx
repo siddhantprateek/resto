@@ -3,7 +3,7 @@ import { Routes, Route} from 'react-router-dom';
 
 // Internals
 import './App.css';
-import { Home } from './pages';
+import { About, Home, Menu } from './pages';
 import { Header, Footer } from './components';
 
 function App() {
@@ -12,6 +12,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
       <Footer />
     </div>
