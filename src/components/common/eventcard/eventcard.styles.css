@@ -1,0 +1,59 @@
+.event-card {
+
+  /* height: 10rem; */
+  width: 60rem;
+  margin: 2rem 0;
+}
+
+.event-detail-container {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-event-details {
+  width: 28rem;
+}
+
+.left-event-details h1 {
+  line-height: 2rem;
+}
+
+.event-thumbnail {
+  height: 20rem;
+  width: 28rem;
+  border-radius: 10px;
+  /* background-position: ; */
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.event-left-footer {
+  width: 10rem;
+  line-height: 1.8rem;
+}
+
+.purple {
+  color: rgb(146, 94, 234);
+}
+
+.book-event-btn {
+  font-family: 'Dela Gothic One', cursive;
+  background-color: #f9cb6f;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.book-event-btn:hover {
+  background-color: transparent;
+}
