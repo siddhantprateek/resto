@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { MenuItem } from '../../mirage/types';
 
 // internals
 import './home.styles.css';
@@ -10,6 +11,8 @@ import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
 
 
 const Home = () => {
+  const [items, setItems] = useState<MenuItem[]>()
+
   const { ref: highLightRef , inView: highLightView } = useInView({ threshold: 0, });
   const { ref: trendRef, inView: trendView } = useInView({ threshold: 0, })
   const { ref: expMenuRef, inView: expMenuView } = useInView({ threshold: 0, })
@@ -18,6 +21,11 @@ const Home = () => {
   const { ref: foodTagRef, inView: foodTagView } = useInView({ threshold: 0, })
   const { ref: showEventTagRef, inView: showEventTagView } = useInView({ threshold: 0, })
 
+  useEffect(() => {
+    fetch("https://restaurant.service/api/food/menu")
+    .then((res) => res.json())
+    .then((json) => setItems(json.items))
+  }, [])
 
   return (
     <div className='home-page'>
@@ -120,9 +128,19 @@ const Home = () => {
         </div>
         <div className="listed-recipe-container">
           <div className="listed-recipes">
-            <RecipeItem />
-            <RecipeItem />
-            <RecipeItem />
+          {
+            items?.slice(0, 3).map((item: MenuItem) => (
+              <RecipeItem 
+                key={item.name}
+                name={item.name} 
+                description={item.description}
+                ingredients={item.ingredients}
+                nutritional_info={item.nutritional_info}
+                price={item.price}
+                seasonal_availability={item.seasonal_availability}  
+              />
+            ))
+          }
           </div>
         </div>
       </div>
