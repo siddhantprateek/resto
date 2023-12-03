@@ -19,6 +19,11 @@ let NavOption = [
     "title": "Events",
     "link": "/events",
     "id": "events"
+  },
+  {
+    "title": "Initiatives",
+    "link": "/initiatives",
+    "id": "initiatives"
   }
 ]
 
