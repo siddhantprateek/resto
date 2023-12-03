@@ -20,6 +20,7 @@ export { default as CHEF } from './chef.png';
 // Icons
 export { default as SEARCHICON } from './search-icon.png';
 export { default as RIGHTARW_ICON } from './right.png';
+export { default as FRIES } from './fries.png';
 
 // Events
 export { default as EVENT1 } from './event1.jpg';
@@ -29,3 +30,9 @@ export { default as EVENT2 } from './event2.jpg';
 export { default as FARMFOOD } from './mask1.png';
 export { default as WASTEMGT } from './mask2.png';
 export { default as SEAFOOD } from './mask3.png';
+
+// Socials
+export { default as FBICON } from './facebook.png';
+export { default as IGICON } from './instagram.png';
+export { default as TWITTERICON } from './twitter.png';
+export { default as WEBSITEICON } from './website.png';
