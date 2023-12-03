@@ -1,16 +1,19 @@
 import React from 'react'
+import { useInView } from 'react-intersection-observer';
 
 // Internals
 import './footer.styles.css';
 import { LOGO } from '../../assets';
 
 const Footer = () => {
+  const { ref: footerRef, inView: footerView } = useInView({ threshold: 0, })
+
   return (
-    <div className='footer'>
+    <div className={`footer ${footerView ? "trans-from-top": ""}`} ref={footerRef}>
       <div className="sub-footer-1">
         <div className="left-footer-content">
           <p>123 Gourmet Avenue,<br/> Culinary Metropolis</p>
-          <p>GET UPDATES ON FUN STUFF YOU <br/> PROBABLY WANT TO KNOW ABOUT<br/>  IN YOUR INBOX</p>
+          <p>Get Updates On Fun Stuff You <br/> Probably Want To Know About<br/>  In Your Inbox</p>
           <input type="email" className='get-updated-email' placeholder='Email address' name="" id="" />
         </div>
         <div className="right-footer-content">
