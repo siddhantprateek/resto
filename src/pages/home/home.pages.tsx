@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 // internals
 import './home.styles.css';
@@ -9,20 +10,30 @@ import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
 
 
 const Home = () => {
+  const { ref: highLightRef , inView: highLightView } = useInView({ threshold: 0, });
+  const { ref: trendRef, inView: trendView } = useInView({ threshold: 0, })
+  const { ref: expMenuRef, inView: expMenuView } = useInView({ threshold: 0, })
+  const { ref: awardbgRef, inView: awardbgView } = useInView({ threshold: 0, })
+  const { ref: chefSpRef, inView: chefSpView } = useInView({ threshold: 0, })
+  const { ref: foodTagRef, inView: foodTagView } = useInView({ threshold: 0, })
+  const { ref: showEventTagRef, inView: showEventTagView } = useInView({ threshold: 0, })
+
+
   return (
     <div className='home-page'>
       {/* Design */}
       <div className="bg-image"><div className="circle"></div></div>
 
-      {/* Hero Section */}
+      {/* ------ Hero Section ------ */}
+
       <div className="hero-section">
         <Hero />
       </div>
 
 
-
-      <div className="highlighted-food-section">
-        <div className="highlighted-food-items trans-from-right">
+      {/* ------ Highlighted Food Items Section  ------ */}
+      <div className="highlighted-food-section" ref={highLightRef}>
+        <div className={`highlighted-food-items ${ highLightView ? "trans-from-right" : ""}`}>
           <FoodItem />
           <FoodItem />
           <FoodItem />
@@ -32,7 +43,7 @@ const Home = () => {
       </div>
       <div className="highlighted-bottom-header">
         <div>
-          <h1>Trending Today </h1>
+          <h1 className={trendView ? 'tracking-in-expand': ""} ref={trendRef}>Trending Today </h1>
           <div className="underline-line">
             <img className='underline' src={UNDERLINE} alt="" />
           </div>
@@ -40,20 +51,25 @@ const Home = () => {
         <img className='arrow' src={ARROW} alt="" />
       </div>
 
+
+      {/* ------ Explore the Menu section ------ */}
+    
       <div className="dive-into-menu-section">
-        <div className="menu-container">
-          <div className="explore-menu-left-content trans-from-left">
+        <div className="menu-container" ref={expMenuRef}>
+          <div className={`explore-menu-left-content ${ expMenuView ? "trans-from-left": ""}`}>
             <h1>Fresh & tasty Steaks</h1>
             <p>Our fiery dance of flavors features crispy chicken wings coated in a smoky chipotle glaze, served with cooling avocado ranch.</p>
-            <button className='explore-menu-btn'>
-              Explore Menu
-            </button>
+            <a href="/menu">
+              <button className='explore-menu-btn'>
+                Explore Menu
+              </button>
+            </a>
           </div>
-          <img className='exp-menu-food-img' src={FOOD1} alt="" />
+          <img className='exp-menu-food-img rotate-image' src={FOOD1} alt="" />
         </div>
       </div>
 
-      {/* Our Happy Customers */}
+      {/* ------ Our Happy Customers ------ */}
 
       <div className="customer-testinomials">
         <div className="testinomial-header">
@@ -66,11 +82,11 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Awards Section */}
+      {/* ------ Awards Section ------ */}
 
       <div className="awards-section">
-        <div className="award-bg">
-          <h1>AWARDS</h1>
+        <div className="award-bg" ref={awardbgRef}>
+          <h1 className={awardbgView ? "trans-from-left": ""}>AWARDS</h1>
         </div>
         <div className="award-header">
           <h1>Awards 🙌</h1>
@@ -82,11 +98,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Our Chef Special */}
+      {/* ------ Our Chef Special ------ */}
+    
       <div className="chef-recommended">
         <div className="chef-header">
-          <div className="recommended-header">
-            <h1>Our Chefs Special <span className='red-dot'>.</span> </h1>
+          <div className="recommended-header" ref={chefSpRef}>
+            <h1 className={chefSpView ? "trans-from-left": ""}>Our Chefs Special <span className='red-dot'>.</span> </h1>
             <div className="frying-pan-div">
               <img className='frying' src={FRYING} alt="" />
             </div>
@@ -94,7 +111,7 @@ const Home = () => {
         </div>
         {/* Tags */}
         <div className="restaurant-cusines">
-          <div className="all-cusines-container">
+          <div className={`all-cusines-container ${foodTagView ? "trans-from-right-less": ""}`} ref={foodTagRef}>
             <p className='cusines-tags'>Italian</p>
             <p className='cusines-tags'>Chinese</p>
             <p className='cusines-tags'>Korean</p>
@@ -109,22 +126,30 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* Events Section */}
+    
+
+      {/* ------ Events Section ------ */}
+    
       <div className="events-section">
-        <div className="explore-events"
+        <div className={`explore-events ${ showEventTagView ? "trans-from-left": ""}`}
           style={{
             backgroundImage: `url('${CONCERT}')`
           }}
         >
-          <h1>Make your nights <br /> Memorable</h1>
-          <p>Book Tickets Now..., Enjoy the nights with top singers <br /> and artists around the country</p>
-          <button className="book-ticks-now">
-            Book Now!
-          </button>
+          <div className={showEventTagView ? "trans-from-right-less": ""} ref={showEventTagRef}>
+            <h1>Make your nights <br /> Memorable</h1>
+            <p>Book Tickets Now..., Enjoy the nights with top singers <br /> and artists around the country</p>
+            <a href="/events">
+              <button className="book-ticks-now">
+                Book Now!
+              </button>
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Reservation */}
+      {/* ------- Reservation ------ */}
+    
       <div className="reservation-section">
         <Reservations />
       </div>

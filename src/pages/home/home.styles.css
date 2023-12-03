@@ -70,6 +70,10 @@
   width: 25rem;
 }
 
+.explore-menu-left-content a {
+  text-decoration: none;
+}
+
 .explore-menu-left-content h1 {
   font-size: 3.5rem;
   line-height: 3rem;
