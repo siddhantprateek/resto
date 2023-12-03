@@ -2,18 +2,19 @@ import React from 'react'
 
 // Internals
 import './awardbadge.styles.css';
+import { IAward } from '../../../mirage/types';
 
-const AwardBadge = () => {
+const AwardBadge = (props: IAward) => {
   return (
     <div className='award-badge'>
       <div className="blue-container">
-        <h3>World's 50 Best Restaurants</h3>
+        <h3>{props.organization}</h3>
       </div>
       <div className="red-container">
-       <p>Top 5 Restaurants Worldwide</p>
+       <p>{props.award}</p>
       </div>
       <div className="award-year">
-        <h3>2021</h3>
+        <h3>{props.year}</h3>
       </div>
     </div>
   )
