@@ -3,14 +3,13 @@ import { useInView  } from 'react-intersection-observer';
 // Internals
 import './recipeItem.styles.css';
 import { MenuItem } from '../../../mirage/types';
-import { FOOD1 } from '../../../assets';
 
 const URLS = [
-  'https://www.archanaskitchen.com/images/archanaskitchen/1-Author/shaheen_ali/Stove_Top_Grilled__Smoked_Tandoori_Chicken.jpg',
   'https://loremflickr.com/640/480/food?lock=7855588044177408',
   'https://loremflickr.com/cache/resized/3092_2789914960_624f21f685_z_640_480_nofilter.jpg',
   'https://loremflickr.com/cache/resized/65535_53045562761_ef0ba9722b_c_640_480_nofilter.jpg',
   'https://loremflickr.com/cache/resized/65535_52976093903_3e1222f513_z_640_480_nofilter.jpg',
+  'https://www.archanaskitchen.com/images/archanaskitchen/1-Author/shaheen_ali/Stove_Top_Grilled__Smoked_Tandoori_Chicken.jpg',
   'https://loremflickr.com/cache/resized/65535_52790943163_804ac4b806_b_640_480_nofilter.jpg'
 ]
 

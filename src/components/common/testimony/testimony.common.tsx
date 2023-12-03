@@ -1,15 +1,19 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer';
+import { Rating } from 'react-simple-star-rating'
+
 // Internals
 import './testimony.styles.css';
+import { IReviews } from '../../../mirage/types';
 
-const Testimony = () => {
+const Testimony = (props: IReviews) => {
+  let IMG_URL = "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   const { ref: testimonyRef, inView: testimonyView } = useInView({ threshold: 0, })
   return (
     <div className={`testinomy ${testimonyView ? "trans-from-buttom": ""}`} ref={testimonyRef}>
       <div className="customer">
-        <img className='customer-img' src={"https://static.demilked.com/wp-content/uploads/2019/04/5cb6d34f775c2-stock-models-share-weirdest-stories-photo-use-102-5cb5c725bc378__700.jpg"} alt="" />
-        <h3>Charlie</h3>
+        <img className='customer-img' src={IMG_URL} alt="" />
+        <h3>{props.customer_name}</h3>
       </div>
       
       <div className="testinomy-header">
@@ -17,10 +21,10 @@ const Testimony = () => {
       </div>
       <div className="review">
         <div className="rating">
-          <p>5</p>
+          <p><Rating readonly={true}  initialValue={props.rating}/></p>
         </div>
         <p className="testinomy-content">
-          Epicurean Symphony takes gastronomy to new heights. Chef Isabella's creations are a culinary masterpiece.
+          {props.comment}
         </p>
       </div>
    

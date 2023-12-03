@@ -2,15 +2,20 @@ import React from 'react';
 
 // Internals
 import './foodItem.styles.css';
-import { FOOD1 } from '../../../assets';
+import { FOOD2, FOOD3 } from '../../../assets';
 
-const FoodItem = () => {
+const IMG_URL = [
+  FOOD2,
+  FOOD3,
+]
+
+const FoodItem = (props: { value: number}) => {
   return (
     <div className='food-item'>
-      <img className="food-img" src={FOOD1} alt="" />
+      <img className="food-img rotate-image" src={IMG_URL[props.value]} alt="" />
       <div className="food-item-content">
         <div className="item-title-content">
-          <h3>Red Hot BBQ <br/> Chicken Wing</h3>
+          <h3>Red Hot BBQ <br/> Fish Permason</h3>
           <p>215 Calories</p>
         </div>
         <hr />

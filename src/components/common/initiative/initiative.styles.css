@@ -1,0 +1,24 @@
+
+.display-flex {
+  display: flex;
+}
+
+.display-flex-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.initiative-card {
+  width: 60rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.init-img {
+  height: 25rem;
+}
+
+.init-title {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
