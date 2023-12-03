@@ -57,3 +57,15 @@
 .book-event-btn:hover {
   background-color: transparent;
 }
+.event-right-footer {
+  line-height: 1rem;
+  text-align: right;
+}
+
+.event-right-footer p {
+  color: rgb(146, 94, 234);
+}
+
+.formatted-event-date {
+  color: rgb(133, 133, 133);
+}
