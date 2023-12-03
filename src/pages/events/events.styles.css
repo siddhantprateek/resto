@@ -1,0 +1,18 @@
+.events-page {
+  padding: 0 5%;
+}
+
+.listed-event-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-header h1 {
+  position: absolute;
+  font-size: 20rem;
+  line-height: 1rem;
+  z-index: -1;
+  color: rgba(172, 172, 172, 0.153);
+}
