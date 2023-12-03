@@ -40,7 +40,7 @@ const Eventcard = (props: IEvent) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [props.date, calculateTimeLeft]);
 
   return (
     <div className={`event-card ${eventView ? "trans-from-left": ""}`}>
