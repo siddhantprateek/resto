@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom';
 // Internals
 import { LOGO } from '../../assets';
 import './header.styles.css';
@@ -24,9 +24,14 @@ let NavOption = [
 
 
 const Header = () => {
+  const navigate = useNavigate()
+
+  const ToHome = () => {
+    return navigate("/")
+  }
   return (
     <header className='header'>
-      <div className="left-header">
+      <div className="left-header" onClick={ToHome}>
         <img className='header-logo' src={LOGO}  alt="" />
         <h2>Just Symphony</h2>
       </div>
