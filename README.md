@@ -45,6 +45,10 @@ npm run start # run the react application on port 3000
 | `GET /initiatives`     | Retrieves all Initiative taken by restaurant     | 
 | `GET /reviews`     | Fetch customer reviews(`customer_name`, `comment`, `rating`)   | 
 | `GET /events`     | Fetch Upcoming Events(`name`,`date`, `description`)    | 
+| `GET /website`     | Fetch website Url   | 
+| `GET /socials`     | Fetch All online presence Urls (`facebook`, `Instagram`, `Twitter`)   | 
+
+
 
 
 ## Application Folder structure
