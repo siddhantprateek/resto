@@ -30,7 +30,7 @@ const Header = () => {
     return navigate("/")
   }
   return (
-    <header className='header'>
+    <header className='header trans-from-top'>
       <div className="left-header" onClick={ToHome}>
         <img className='header-logo' src={LOGO}  alt="" />
         <h2>Just Symphony</h2>
