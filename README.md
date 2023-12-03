@@ -81,4 +81,4 @@ npm run start # run the react application on port 3000
 
 ## Author 
 
-![Siddhant Prateek Mahanayak](https://github.com/siddhantprateek)
+[Siddhant Prateek Mahanayak](https://github.com/siddhantprateek)
