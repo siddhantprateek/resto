@@ -76,6 +76,10 @@
   transition: all .2s;
 }
 
+.selected-recipe-tag:hover {
+  text-decoration: line-through;
+}
+
 .recipe-tag:hover {
   background-color: #f9cb6f;
 }

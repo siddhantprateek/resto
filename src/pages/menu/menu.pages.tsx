@@ -5,14 +5,16 @@ import './menu.styles.css';
 import { RIGHTARW_ICON, SEARCHICON } from '../../assets';
 import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
 import { createMockServer } from '../../mirage/createMockServer';
+import { MenuItem } from '../../mirage/types';
 
 
 createMockServer()
 
-let FOOD_TAGS = ['Summer', 'Fall', 'Year-Round', 'Indian', 'Americana', 'Seasonal']
+let FOOD_TAGS = ['Summer', 'Fall', 'Year-Round', 'Global Fusion Entrees', 'Epicurean Indulgences', 'Seasonal', 'Mango Tango Ceviche']
 
 const Menu = () => {
   const [selectedTags, setSelectedTags] = useState(new Map());
+  const [items, setItems] = useState<MenuItem[]>()
 
   const handleTagClick = (tag: string) => {
     const newSelectedTags = new Map(selectedTags);
@@ -33,9 +35,10 @@ const Menu = () => {
   useEffect(() => {
     fetch("https://restaurant.service/api/food/menu")
     .then((res) => res.json())
-    .then((json) => console.log(json.menu))
+    .then((json) => setItems(json.items))
   }, [])
 
+  console.log("Menu item",items)
   return (
     <div className='menu-page'>
       <div className="menu-search-section">
@@ -79,17 +82,19 @@ const Menu = () => {
 
       <div className="listed-food-items">
         <div className="listed-menu-grid-view">
-          <RecipeItem />
-          <RecipeItem />
-          <RecipeItem />
-
-          <RecipeItem />
-          <RecipeItem />
-          <RecipeItem />
-
-          <RecipeItem />
-          <RecipeItem />
-          <RecipeItem />
+          {
+            items?.map((item: MenuItem) => (
+              <RecipeItem 
+                key={item.name}
+                name={item.name} 
+                description={item.description}
+                ingredients={item.ingredients}
+                nutritional_info={item.nutritional_info}
+                price={item.price}
+                seasonal_availability={item.seasonal_availability}  
+              />
+            ))
+          }
         </div>
       </div>
 
