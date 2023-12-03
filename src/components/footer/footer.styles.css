@@ -11,14 +11,31 @@
 
 .hr-line {
   height: 1px;
-  background-color: rgb(129, 129, 129);
+  background-color: rgba(168, 168, 168, 0.5);
   /* width: 95%; */
   margin: 1rem ;
 }
 
 .sub-footer-2 {
   padding: .5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.social-icon {
+  height: 1.8rem;
+  margin: 0 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo p {
+  margin-right: 1rem;
+}
+
 .footer-logo {
   height: 2rem;
 }
