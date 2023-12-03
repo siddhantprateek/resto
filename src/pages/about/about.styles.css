@@ -81,3 +81,18 @@
   color: rgb(98, 98, 98);
 }
 
+
+
+.location-header h1 {
+  font-size: 8rem;
+  margin-top: 10rem;
+  line-height: 1rem;
+  color: rgba(240, 201, 26, 0.438);
+}
+
+.map {
+  position: relative;
+  outline: none;
+  border: none;
+  margin-top: -2rem;
+}
