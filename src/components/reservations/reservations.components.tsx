@@ -1,5 +1,7 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer';
+import { ToastContainer, toast } from 'react-toastify';
+
 // Internals
 import './reservations.styles.css';
 
@@ -38,6 +40,16 @@ const Reservations = () => {
   const { ref: reserveRef, inView: reserveView } = useInView({ threshold: 0, })
   const { ref: reserveHeaderRef, inView: reserveHeaderView } = useInView({ threshold: 0, })
 
+  const notify = () => toast('Soon our executive will get in touch with You. 😁', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });;
 
   return (
     <div className='reserve-table'>
@@ -57,8 +69,9 @@ const Reservations = () => {
           <div className="book-container-3">
             <input type="text" className='special-inp' placeholder='Anything Special in your mind.' name="" id="" />
           </div>
-          <button className='book-table-btn' type="submit">Book Seat</button>
+          <button className='book-table-btn' onClick={notify} type="button">Book Seat</button>
         </div>
+        <ToastContainer />
         <div className={`booking-availability ${reserveView ? "trans-from-right-less": ""}`}>
           <h1>AVAILABILITY</h1>
           <div className="booking-list">
