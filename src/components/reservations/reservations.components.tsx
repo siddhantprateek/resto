@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useInView } from 'react-intersection-observer';
 // Internals
 import './reservations.styles.css';
 
@@ -35,13 +35,17 @@ let SLOTS = [
 ]
 
 const Reservations = () => {
+  const { ref: reserveRef, inView: reserveView } = useInView({ threshold: 0, })
+  const { ref: reserveHeaderRef, inView: reserveHeaderView } = useInView({ threshold: 0, })
+
+
   return (
     <div className='reserve-table'>
-      <div className="reserve-header">
+      <div className={`reserve-header ${reserveHeaderView ? "trans-from-right-less": ""}`}ref={reserveHeaderRef}>
         <h1>BOOK TABLE</h1>
       </div>
-      <div className="booking-details-input">
-        <div className="booking-left-container">
+      <div className="booking-details-input" ref={reserveRef}>
+        <div className={`booking-left-container ${reserveView ? "trans-from-left": ""}`}>
           <div className="book-container-1">
             <input type="text" className='name-inp' placeholder='Name' />
             <input type="text" className='phone-inp' placeholder='Phone Number' name="" id="" />
@@ -55,7 +59,7 @@ const Reservations = () => {
           </div>
           <button className='book-table-btn' type="submit">Book Seat</button>
         </div>
-        <div className="booking-availability">
+        <div className={`booking-availability ${reserveView ? "trans-from-right-less": ""}`}>
           <h1>AVAILABILITY</h1>
           <div className="booking-list">
             <ul>
