@@ -20,3 +20,7 @@ export { default as CHEF } from './chef.png';
 // Icons
 export { default as SEARCHICON } from './search-icon.png';
 export { default as RIGHTARW_ICON } from './right.png';
+
+// Events
+export { default as EVENT1 } from './event1.jpg';
+export { default as EVENT2 } from './event2.jpg';
