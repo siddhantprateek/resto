@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Internals
 import './menu.styles.css';
 import { RIGHTARW_ICON, SEARCHICON } from '../../assets';
 import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
+import { createMockServer } from '../../mirage/createMockServer';
+
+
+createMockServer()
+
+let FOOD_TAGS = ['Summer', 'Fall', 'Year-Round', 'Indian', 'Americana', 'Seasonal']
 
 const Menu = () => {
   const [selectedTags, setSelectedTags] = useState(new Map());
@@ -23,6 +29,12 @@ const Menu = () => {
     newSelectedTags.delete(tag);
     setSelectedTags(newSelectedTags);
   };
+
+  useEffect(() => {
+    fetch("https://restaurant.service/api/food/menu")
+    .then((res) => res.json())
+    .then((json) => console.log(json.menu))
+  }, [])
 
   return (
     <div className='menu-page'>
@@ -52,7 +64,7 @@ const Menu = () => {
 
       <div className="recipe-tags">
         <div className="recipe-tag-container">
-          {['Italian', 'Chinese', 'Korean', 'Indian', 'Americana', 'Indiana'].map((tag) => (
+          {FOOD_TAGS.map((tag) => (
             <p
               key={tag}
               className={`recipe-tag ${selectedTags.has(tag) ? 'selected' : ''}`}
