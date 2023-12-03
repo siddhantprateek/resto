@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { useInView } from 'react-intersection-observer'
 // Internals
 import './testimony.styles.css';
 
 const Testimony = () => {
+  const { ref: testimonyRef, inView: testimonyView } = useInView({ threshold: 0, })
   return (
-    <div className='testinomy'>
+    <div className={`testinomy ${testimonyView ? "trans-from-buttom": ""}`} ref={testimonyRef}>
       <div className="customer">
         <img className='customer-img' src={"https://static.demilked.com/wp-content/uploads/2019/04/5cb6d34f775c2-stock-models-share-weirdest-stories-photo-use-102-5cb5c725bc378__700.jpg"} alt="" />
         <h3>Charlie</h3>

@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
-
+import { useInView  } from 'react-intersection-observer';
 // Internals
 import './recipeItem.styles.css';
 
 const RecipeItem = () => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const { ref: recipeItemRef , inView: recipeItemView } = useInView({ threshold: 0, })
+  
   return (
     <div
-      className={`recipe-card ${isHovered ? 'hovered' : ''}`}
+      className={`recipe-card ${recipeItemView ? "trans-from-top": ""} ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="recipe-image-container">
+      <div className="recipe-image-container" ref={recipeItemRef}>
         <img
           className="recipe-img"
           src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/shaheen_ali/Stove_Top_Grilled__Smoked_Tandoori_Chicken.jpg"
