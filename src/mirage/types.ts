@@ -106,9 +106,11 @@ export interface Restaurant {
       }[];
     };
   };
-  reviews: {
-    customer_name: string;
-    rating: number;
-    comment: string;
-  }[];
+  reviews: IReviews[];
+}
+
+export interface IReviews {
+  customer_name: string;
+  rating: number;
+  comment: string;
 }

@@ -2,7 +2,7 @@ import { createServer, Model, Request, } from "miragejs";
 
 // Internals
 import data from '../data/restaurantData.json';
-import { Restaurant, MenuItem } from "./types";
+import { Restaurant } from "./types";
 
 export const createMockServer = () => {
   createServer({
@@ -21,6 +21,8 @@ export const createMockServer = () => {
         ...data.restaurant.menu.seasonal_menu.items
       ],
         seasonal: data.restaurant.menu.seasonal_menu.items,
+        awards: data.restaurant.awards,
+        reviews: data.restaurant.reviews
       }
     )},
 
@@ -42,9 +44,25 @@ export const createMockServer = () => {
         return { items: items }
       });
 
+      this.get("/awards", (schema) => {
+        let awards = schema.db.awards
+        return { awards: awards }
+      });
+
+      this.get("/initiatives", (schema) => {
+        let initiatives = schema.db.initiatives
+        return { initiatives: initiatives }
+      });
+
+      this.get("/reviews", (schema) => {
+        let reviews = schema.db.reviews
+        return { reviews: reviews }
+      });
+
       this.get("/events", () => {
         return { events: data.restaurant.events.upcoming_events }
       });
+
       
       this.get("/menu", (schema, request: Request) => {
         const { season } = request.queryParams as { season: string };
