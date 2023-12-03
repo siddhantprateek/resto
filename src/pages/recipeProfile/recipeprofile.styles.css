@@ -1,0 +1,91 @@
+.recipeprofile-page {
+  padding: 0 5%;
+}
+.recipe-profile-img {
+  height: 25rem;
+  border-radius: 20px;
+}
+
+.recipe-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipe-container {
+  /* background-color: green; */
+  /* width: 70rem; */
+  display: flex;
+  align-items: center;
+}
+
+.recipe-right-content {
+  width: 30rem;
+  padding: 0 2rem;
+}
+
+
+
+.nutri-info h1 {
+  line-height: .1rem;
+}
+
+.nutri-section-1,
+.nutri-section-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  text-align: right;
+}
+
+.rectange-shaper {
+  position: relative;
+  z-index: -1;
+  margin-top: -10rem;
+  height: 15rem;
+  background-color: rgba(231, 204, 51, 0.156);
+  border-radius: 20px;
+}
+
+.ing-tag {
+  font-family: 'Dela Gothic One', cursive;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: transparent;
+  width: 100%;
+  margin: .5rem;
+  /* width: fit-content; */
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+}
+
+.ing-tag:hover {
+  background-color: #f9cb6f;
+}
+
+.nutri-header {
+  color: rgb(166, 166, 166);
+}
+.ingredients {
+  text-align: center;
+}
+
+.nutri-info h1 {
+  color: rgb(137, 137, 137);
+}
+
+.nutri-info p {
+  font-weight: 800;
+  margin-top: -.4rem;
+}
+
+.ingredients-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
