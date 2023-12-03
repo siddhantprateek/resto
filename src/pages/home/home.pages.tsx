@@ -120,7 +120,7 @@ const Home = () => {
           <h1 className={awardbgView ? "trans-from-left": ""}>AWARDS</h1>
         </div>
         <div className="award-header">
-          <h1>Awards 🙌</h1>
+          <h1>Awards</h1>
         </div>
         <div className="listed-awards">
           {awards?.map((award: IAward) => (
