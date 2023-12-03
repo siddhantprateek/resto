@@ -2,7 +2,7 @@ import React from 'react';
 
 // internals
 import './home.styles.css';
-import { Hero } from '../../components';
+import { Hero, Reservations } from '../../components';
 import { AwardBadge, FoodItem, Testimony } from '../../components/common';
 import { ARROW, CONCERT, FOOD1, FRYING, UNDERLINE } from '../../assets';
 import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
@@ -122,6 +122,11 @@ const Home = () => {
             Book Now!
           </button>
         </div>
+      </div>
+
+      {/* Reservation */}
+      <div className="reservation-section">
+        <Reservations />
       </div>
     </div>
   )
