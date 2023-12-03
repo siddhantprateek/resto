@@ -22,7 +22,9 @@ export const createMockServer = () => {
       ],
         seasonal: data.restaurant.menu.seasonal_menu.items,
         awards: data.restaurant.awards,
-        reviews: data.restaurant.reviews
+        reviews: data.restaurant.reviews,
+        socials: data.restaurant.online_presence.social_media,
+        website: data.restaurant.online_presence.website
       }
     )},
 
@@ -57,6 +59,16 @@ export const createMockServer = () => {
       this.get("/reviews", (schema) => {
         let reviews = schema.db.reviews
         return { reviews: reviews }
+      });
+
+      this.get("/website", (schema) => {
+        let website = schema.db.website
+        return { website: website }
+      });
+
+      this.get("/socials", (schema) => {
+        let socials = schema.db.socials
+        return { socials: socials }
       });
 
       this.get("/events", () => {
