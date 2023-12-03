@@ -3,6 +3,7 @@ import RestaurantData from '../../data/restaurantData.json';
 // Internals
 import './about.styles.css';
 import { CHEF, MOCK1, MOCK2, MOCK3, MOCK4, MOCK5, RES_MOCK1 } from '../../assets';
+import { Reservations } from '../../components';
 
 const About = () => {
 
@@ -37,7 +38,7 @@ const About = () => {
         <div className="center-sub-about-header">
           <hr />
         </div>
-        <div className="resto-content-container">  
+        <div className="resto-content-container">
           <p className='about-resto-content'>Epicurean Symphony offers a sophisticated and cozy ambiance, with contemporary decor and soft lighting, creating the perfect setting for an unforgettable dining experience.</p>
         </div>
         <div className="hotel-image"
@@ -52,6 +53,7 @@ const About = () => {
 
       <div className="restaurant-gallery">
         <h1 className="restaurant-gallery-title">Gallery</h1>
+
         <div className="gallery-images">
           <div>
             <img className='mock-img' src={MOCK3} alt="" />
@@ -64,6 +66,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <Reservations />
     </div>
   )
 }

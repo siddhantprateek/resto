@@ -27,12 +27,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .mock-img {
   /* height: 30rem; */
   width: 16rem;
-
+  margin: .5rem;
 }
 .chef-v1-header {
   text-align: center;
@@ -79,3 +80,4 @@
 .signature-dish {
   color: rgb(98, 98, 98);
 }
+
