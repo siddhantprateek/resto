@@ -10,6 +10,9 @@
 - `Typescript`
 - `Mirage Js` - Mock Server 
 
+## Objective 
+
+- Within the menu, users have the option to filter items by searching for tag values or by conducting a regular search using item names. While the current selection of tags does not facilitate the desired data query, users can achieve a similar outcome through the search bar.
 
 ## Setting up project for development using `Docker`
 
@@ -49,6 +52,18 @@ npm run start # run the react application on port 3000
 | `GET /socials`     | Fetch All online presence Urls (`facebook`, `Instagram`, `Twitter`)   | 
 
 
+## Website Navigation routes
+
+- The Application is deployed on Vercel - [Website](https://resto-steel.vercel.app)
+
+| `URl: https://resto-steel.vercel.app/` | `Description` |
+| -------- | -------- | 
+| `PATH /`     | Home Page     | 
+| `PATH /about`     | Details about Restaurant and Chef     | 
+| `PATH /menu`     | Shows All the Available Food Items     | 
+| `PATH /events`     | Shows all the Upcoming Events     | 
+| `PATH /initiatives`     | Shows All the initiatives taken by Restaurant for Sustainability     | 
+| `PATH /recipes`     | Shows detailed Food Items   | 
 
 
 ## Application Folder structure
