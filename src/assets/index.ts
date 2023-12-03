@@ -24,3 +24,8 @@ export { default as RIGHTARW_ICON } from './right.png';
 // Events
 export { default as EVENT1 } from './event1.jpg';
 export { default as EVENT2 } from './event2.jpg';
+
+// initiatives
+export { default as FARMFOOD } from './mask1.png';
+export { default as WASTEMGT } from './mask2.png';
+export { default as SEAFOOD } from './mask3.png';
