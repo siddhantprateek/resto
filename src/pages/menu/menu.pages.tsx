@@ -15,6 +15,21 @@ let FOOD_TAGS = ['Summer', 'Fall', 'Year-Round', 'Global Fusion Entrees', 'Epicu
 const Menu = () => {
   const [selectedTags, setSelectedTags] = useState(new Map());
   const [items, setItems] = useState<MenuItem[]>()
+  const [ search, setSearch ] = useState<string>("")
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
+    setSearch(e.target.value)
+  }
+
+  let SearchItems = items?.filter(item => 
+    item.name.toLowerCase().includes(search.toLowerCase()) ||
+    item.seasonal_availability[0].toLowerCase().includes(search.toLowerCase()) ||
+    item.ingredients.includes(search.toLowerCase()) ||
+    item.seasonal_availability[0].includes(Array.from(selectedTags.keys())[0])
+    // item.seasonal_availability[0].toLowerCase().includes(selectedTags.)
+  )
+  
 
   const handleTagClick = (tag: string) => {
     const newSelectedTags = new Map(selectedTags);
@@ -38,7 +53,12 @@ const Menu = () => {
     .then((json) => setItems(json.items))
   }, [])
 
-  console.log("Menu item",items)
+  useEffect(() => {
+    fetch(`https://restaurant.service/api/menu?season=Fall`)
+    .then((res) => res.json())
+    .then((json) => console.log("New Items", json.items))
+  }, [])
+
   return (
     <div className='menu-page'>
       <div className="menu-search-section">
@@ -48,6 +68,7 @@ const Menu = () => {
             type="text"
             className='search-input-field'
             placeholder='Looking for Something Delicious.'
+            onChange={handleSearch}
             name="" id="" />
           <img className='search-it-icon icon' src={RIGHTARW_ICON} alt="" />
         </div>
@@ -83,7 +104,7 @@ const Menu = () => {
       <div className="listed-food-items">
         <div className="listed-menu-grid-view">
           {
-            items?.map((item: MenuItem) => (
+            SearchItems?.map((item: MenuItem) => (
               <RecipeItem 
                 key={item.name}
                 name={item.name} 

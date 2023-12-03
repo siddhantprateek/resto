@@ -1,0 +1,21 @@
+.initiative-page {
+  padding: 0 5%;
+}
+
+.initative-header {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(217, 217, 217);
+}
+
+.listed-initiatives {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listed-initiatives:nth-child(1) {
+  display: flex;
+  /* flex-direction: row-; */
+}
