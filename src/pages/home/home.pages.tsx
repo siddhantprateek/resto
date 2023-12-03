@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { MenuItem } from '../../mirage/types';
+import { IAward, IReviews, MenuItem } from '../../mirage/types';
 
 // internals
 import './home.styles.css';
@@ -10,8 +10,13 @@ import { ARROW, CONCERT, FOOD1, FRYING, UNDERLINE } from '../../assets';
 import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
 
 
+
 const Home = () => {
   const [items, setItems] = useState<MenuItem[]>()
+  const [awards, setAwards] = useState<IAward[]>()
+  const [reviews, setReviews] = useState<IReviews[]>()
+
+
 
   const { ref: highLightRef , inView: highLightView } = useInView({ threshold: 0, });
   const { ref: trendRef, inView: trendView } = useInView({ threshold: 0, })
@@ -25,6 +30,18 @@ const Home = () => {
     fetch("https://restaurant.service/api/food/menu")
     .then((res) => res.json())
     .then((json) => setItems(json.items))
+  }, [])
+
+  useEffect(() => {
+    fetch("https://restaurant.service/api/awards")
+    .then((res) => res.json())
+    .then((json) => setAwards(json.awards))
+  }, [])
+
+  useEffect(() => {
+    fetch("https://restaurant.service/api/reviews")
+    .then((res) => res.json())
+    .then((json) => setReviews(json.reviews))
   }, [])
 
   return (
@@ -42,11 +59,11 @@ const Home = () => {
       {/* ------ Highlighted Food Items Section  ------ */}
       <div className="highlighted-food-section" ref={highLightRef}>
         <div className={`highlighted-food-items ${ highLightView ? "trans-from-right" : ""}`}>
-          <FoodItem />
-          <FoodItem />
-          <FoodItem />
-          <FoodItem />
-          <FoodItem />
+          <FoodItem value={0} />
+          <FoodItem value={1}/>
+          <FoodItem value={0}/>
+          <FoodItem value={1}/>
+          <FoodItem value={0}/>
         </div>
       </div>
       <div className="highlighted-bottom-header">
@@ -84,9 +101,15 @@ const Home = () => {
           <h1>What people are saying about us.</h1>
         </div>
         <div className="testimonial-container">
-          <Testimony />
-          <Testimony />
-          <Testimony />
+          {reviews?.map((review: IReviews) => (
+            <Testimony 
+              key={review.customer_name}
+              customer_name={review.customer_name}
+              comment={review.comment}
+              rating={review.rating}
+            />
+          ))}
+  
         </div>
       </div>
 
@@ -100,9 +123,13 @@ const Home = () => {
           <h1>Awards 🙌</h1>
         </div>
         <div className="listed-awards">
-          <AwardBadge />
-          <AwardBadge />
-          <AwardBadge />
+          {awards?.map((award: IAward) => (
+            <AwardBadge 
+              key={award.award}
+              award={award.award} 
+              organization={award.organization} 
+              year={award.year} />
+          ))}
         </div>
       </div>
 
