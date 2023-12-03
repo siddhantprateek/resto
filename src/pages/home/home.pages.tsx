@@ -92,13 +92,13 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* Tags */}
         <div className="restaurant-cusines">
           <div className="all-cusines-container">
             <p className='cusines-tags'>Italian</p>
             <p className='cusines-tags'>Chinese</p>
             <p className='cusines-tags'>Korean</p>
             <p className='cusines-tags'>Indian</p>
-
           </div>
         </div>
         <div className="listed-recipe-container">
