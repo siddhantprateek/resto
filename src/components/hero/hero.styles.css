@@ -1,11 +1,17 @@
 .hero {
   width: 40rem;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-content h1 {
   font-size: 4.5rem;
   line-height: 4rem;
   font-family: 'Rubik', sans-serif;
+}
+.fries {
+  height: 6rem;
+  transform: rotate(-15deg);
 }
 
 .red {
@@ -28,3 +34,4 @@
   margin-top: -2rem;
   justify-content: center;
 }
+
