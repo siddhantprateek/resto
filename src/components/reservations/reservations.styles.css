@@ -1,0 +1,113 @@
+.booking-details-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5rem;
+}
+
+.reserve-header h1 {
+  font-size: 5rem;
+  color: rgb(213, 213, 213);
+}
+
+.name-inp,
+.phone-inp,
+.date-inp,
+.serves-inp {
+  color: rgba(0,0,0,.87);
+  border-bottom-color: rgba(0,0,0,.42);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .009375em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  align-self: flex-end;
+  box-sizing: border-box;
+  width: 20rem;
+  padding: 20px 16px 6px;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+  background: rgb(245, 245, 245);
+  height: 56px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.special-inp {
+  color: rgba(0,0,0,.87);
+  border-bottom-color: rgba(0,0,0,.42);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .009375em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  align-self: flex-end;
+  box-sizing: border-box;
+  width: 20rem;
+  padding: 20px 16px 6px;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+  background: rgb(245, 245, 245);
+  height: 56px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 98%;
+}
+
+.booking-availability {
+  width: 32rem;
+  /* background-color: red; */
+  padding: 0 2rem;
+}
+
+.booking-availability h1 {
+  font-size: 3rem;
+  color: #acacac;
+}
+
+.book-table-btn {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 98%;
+
+}
+
+.book-table-btn:hover,
+.book-table-btn:focus {
+  opacity: .75;
+}
+
+.time-slots {
+  display: flex;
+  justify-content: space-between;
+}
