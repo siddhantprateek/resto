@@ -1,0 +1,92 @@
+
+.menu-search-section {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  width: fit-content;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+
+.icon {
+  height: 1.5rem;
+  padding: 0 .5rem;
+}
+
+.search-it-icon {
+  cursor: pointer;
+}
+
+.search-input-field {
+  width: 30rem;
+  height: 2rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  padding: 0 .5rem;
+}
+
+.recipe-tag-container {
+  display: flex;
+  justify-content: center;
+  width: 45rem;
+  flex-wrap: wrap;
+}
+.recipe-tags {
+  display: flex;
+  justify-content: center;
+}
+.recipe-tag {
+  font-family: 'Dela Gothic One', cursive;
+  padding: .5rem 2rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: transparent;
+  width: fit-content;
+  margin: .4rem;
+  /* width: fit-content; */
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.selected-recipe-tags {
+  display: flex;
+  justify-content: center;
+}
+
+.selected-recipe-tag {
+  background-color: #f9cb6f;
+  font-family: 'Dela Gothic One', cursive;
+  padding: .5rem 2rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  width: fit-content;
+  margin: .4rem;
+  /* width: fit-content; */
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.recipe-tag:hover {
+  background-color: #f9cb6f;
+}
+
+.listed-food-items {
+  display: flex;
+  justify-content: center;
+}
+.listed-menu-grid-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
