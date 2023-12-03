@@ -1,0 +1,81 @@
+.about-page {
+  padding: 0 5%;
+}
+
+.hotel-image {
+  height: 40rem;
+  border-radius: 20px;
+}
+
+.center-sub-about-header {
+  /* margin: 5rem 0; */
+  margin-top: -2rem;
+}
+
+.resto-content-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+.about-resto-content {
+  width: 40rem;
+  font-size: 1.2rem;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.mock-img {
+  /* height: 30rem; */
+  width: 16rem;
+
+}
+.chef-v1-header {
+  text-align: center;
+}
+
+.chef-v1-header h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.chef-detials-container {
+  display: flex;
+  justify-content: center;
+}
+
+.chef-img {
+  width: 20rem;
+}
+
+.chef-bio-details {
+  width: 30rem;
+  text-align: center;
+}
+
+
+.chef-custom-img {
+  display: flex;
+
+  align-items: center;
+}
+
+.yellow-bar {
+  width: 5rem;
+  height: 15rem;
+  background-color: #FFCB66;
+}
+
+.blue-bar {
+  width: 5rem;
+  height: 23rem;
+  background-color: #42B9DF;
+}
+
+.signature-dish {
+  color: rgb(98, 98, 98);
+}
