@@ -3,6 +3,7 @@
   width: 18rem;
   margin: 1rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .recipe-img {

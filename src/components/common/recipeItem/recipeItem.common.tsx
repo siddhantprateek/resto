@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useInView  } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
+
 // Internals
 import './recipeItem.styles.css';
 import { MenuItem } from '../../../mirage/types';
@@ -17,13 +19,21 @@ const RecipeItem = (props: MenuItem) => {
   const [isHovered, setIsHovered] = useState(false);
   const { ref: recipeItemRef , inView: recipeItemView } = useInView({ threshold: 0, })
   
+  const navigate = useNavigate()
+
+  const ToRecipeDetail = () => {
+    return navigate("/recipes")
+  }
+
   return (
     <div
       className={`recipe-card ${recipeItemView ? "trans-from-top": ""} ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="recipe-image-container" ref={recipeItemRef}>
+      <div className="recipe-image-container" ref={recipeItemRef} 
+        onClick={ToRecipeDetail}
+      >
         <img
           className="recipe-img"
           src={URLS[Math.floor(props.price / 10)]}
@@ -31,8 +41,8 @@ const RecipeItem = (props: MenuItem) => {
         />
       </div>
       <div className="recipe-details">
-        <h2 className="recipe-title">{props.name}</h2>
-        <p className="recipe-description">
+        <h2 className="recipe-title" onClick={ToRecipeDetail}>{props.name}</h2>
+        <p className="recipe-description" onClick={ToRecipeDetail}>
           {props.description}
         </p>
         {isHovered ? (
