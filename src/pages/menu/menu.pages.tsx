@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React, { useState, useEffect } from 'react'
 
 // Internals

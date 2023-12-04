@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { IAward, IReviews, MenuItem } from '../../mirage/types';

@@ -1,3 +1,5 @@
+/* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */
+
 .hero-section {
   display: flex;
   justify-content: center;
@@ -85,8 +87,7 @@
   
 }
 
-
-/* CSS */
+/* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */
 .explore-menu-btn {
   background-color: #bde0fe;
   border: 0 solid #E5E7EB;
@@ -172,6 +173,7 @@
   padding: 0 5rem;
 
 }
+/* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */
 
 .award-bg {
   position: absolute;

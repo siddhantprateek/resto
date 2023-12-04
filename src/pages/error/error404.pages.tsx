@@ -1,11 +1,18 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React from 'react'
 
 // Internals
 import './error404.styles.css';
+import { IMG404 } from '../../assets';
 
 const Error404 = () => {
   return (
-    <div>Error404</div>
+    <div className='error-page'>
+      <div className="error-content">
+        <img src={IMG404} alt="" />
+      </div>
+    </div>
   )
 }
 

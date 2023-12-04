@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -27,3 +29,5 @@ code {
   height: 10px;
   display: none;
 }
+
+/* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */

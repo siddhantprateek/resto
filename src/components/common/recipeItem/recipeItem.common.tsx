@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React, { useState } from 'react'
 import { useInView  } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';

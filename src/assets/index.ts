@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 export { default as LOGO } from './logo.png';
 export { default as FOOD1 } from './plate.png';
 export { default as UNDERLINE } from './underline.png';
@@ -36,3 +38,5 @@ export { default as FBICON } from './facebook.png';
 export { default as IGICON } from './instagram.png';
 export { default as TWITTERICON } from './twitter.png';
 export { default as WEBSITEICON } from './website.png';
+
+export { default as IMG404 } from './404.gif';

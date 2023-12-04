@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React from 'react'
 import { useInView } from 'react-intersection-observer';
 import { ToastContainer, toast } from 'react-toastify';

@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 export interface ILocation {
   address: string;
   latitude: number;

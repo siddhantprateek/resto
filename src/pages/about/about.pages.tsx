@@ -1,6 +1,8 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-// import RestaurantData from '../../data/restaurantData.json';
+
 // Internals
 import './about.styles.css';
 import { CHEF, MOCK1, MOCK2, MOCK3, MOCK4, MOCK5, RES_MOCK1 } from '../../assets';

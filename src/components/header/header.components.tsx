@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 // Internals

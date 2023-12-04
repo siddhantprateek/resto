@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import { createServer, Model, Request, } from "miragejs";
 
 // Internals

@@ -1,3 +1,5 @@
+// Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
