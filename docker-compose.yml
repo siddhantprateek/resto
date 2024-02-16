@@ -2,12 +2,11 @@ version: '3.4'
 
 services:
   resto:
-    image: resto
-    container_name: resto_web
+    image: resto-web
     build:
       context: .
       dockerfile: ./Dockerfile
-    # environment:
-    #   NODE_ENV: production
+    environment:
+      NODE_ENV: production
     ports:
       - 3000:3000
