@@ -51,7 +51,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="hr-line"></div>
+      <div className="hr-line" />
       <div className="sub-footer-2">
         <div className="payment-options">
           <a target='__blank' href={website}><img className='social-icon' src={WEBSITEICON} alt="" /></a>

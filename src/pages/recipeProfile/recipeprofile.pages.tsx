@@ -56,9 +56,7 @@ const Recipeprofile = () => {
         </div>
       </div>
 
-      <div className="rectange-shaper">
-
-      </div>
+      <div className="rectange-shaper" />
     </div>
   )
 }

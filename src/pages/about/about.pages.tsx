@@ -57,9 +57,9 @@ const About = () => {
         <div className="chef-detials-container">
           <div className="chef-details">
             <div className="chef-custom-img">
-              <div className={`yellow-bar ${ barView ? 'trans-from-left': ""}`}></div>
+              <div className={`yellow-bar ${ barView ? 'trans-from-left': ""}`} />
               <img className={`chef-img ${ barView ?'trans-from-buttom': ""}`} src={CHEF} alt="" ref={barRef} />
-              <div className={`blue-bar ${ barView ? 'trans-from-right-less': ""}`}></div>
+              <div className={`blue-bar ${ barView ? 'trans-from-right-less': ""}`} />
             </div>
             <div className="chef-bio-details">
               <h2>{chef?.name}</h2>
@@ -88,7 +88,7 @@ const About = () => {
             backgroundSize: "cover"
           }}
           ref={ambRef}
-        ></div>
+         />
 
       </div>
 
@@ -116,7 +116,7 @@ const About = () => {
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1889750.364140218!2d-76.67179198586234!3d40.173483527201874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sin!4v1701598188956!5m2!1sen!2sin" 
           width="100%"
           style={{ borderRadius: "20px"}} 
-          height="350"  loading="lazy"></iframe>
+          height="350"  loading="lazy" />
           </p>
     
       </div>

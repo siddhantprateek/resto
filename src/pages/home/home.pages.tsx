@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <div className='home-page'>
       {/* Design */}
-      <div className="bg-image"><div className="circle"></div></div>
+      <div className="bg-image"><div className="circle" /></div>
 
       {/* ------ Hero Section ------ */}
 
