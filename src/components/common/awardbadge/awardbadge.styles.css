@@ -4,23 +4,44 @@
   text-align: center;
   margin: 2rem;
   /* .box { */
-    width: 250px;
-    padding: 1.5rem;
-    aspect-ratio: 1;
-    background: hsla(11, 96%, 53%, 1);
+  width: 250px;
+  padding: 1.5rem;
+  aspect-ratio: 1;
+  background: hsla(11, 96%, 53%, 1);
 
-    background: linear-gradient(135deg, hsla(11, 96%, 53%, 1) 0%, hsla(299, 75%, 57%, 1) 100%);
-    
-    background: -moz-linear-gradient(135deg, hsla(11, 96%, 53%, 1) 0%, hsla(299, 75%, 57%, 1) 100%);
-    
-    background: -webkit-linear-gradient(135deg, hsla(11, 96%, 53%, 1) 0%, hsla(299, 75%, 57%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FA3D13", endColorstr="#E141E4", GradientType=1 );
-    clip-path: polygon(97.55% 65.45%,50.00% 100.00%,2.45% 65.45%,20.61% 9.55%,79.39% 9.55%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
+  background: linear-gradient(
+    135deg,
+    hsla(11, 96%, 53%, 1) 0%,
+    hsla(299, 75%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(11, 96%, 53%, 1) 0%,
+    hsla(299, 75%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(11, 96%, 53%, 1) 0%,
+    hsla(299, 75%, 57%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FA3D13", endColorstr="#E141E4", GradientType=1 );
+  clip-path: polygon(
+    97.55% 65.45%,
+    50% 100%,
+    2.45% 65.45%,
+    20.61% 9.55%,
+    79.39% 9.55%
+  );
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .award-badge p {

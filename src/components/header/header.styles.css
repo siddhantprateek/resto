@@ -26,7 +26,6 @@ header {
 .nav-options li {
   margin-left: 5rem;
   font-size: 1.2rem;
- 
 }
 
 .nav-options a {
@@ -35,13 +34,13 @@ header {
 }
 
 .order-now-btn {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   background-color: #f9cb6f;
   padding: 1rem 2rem;
   border-radius: 30px;
   width: fit-content;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .order-now-btn:hover {

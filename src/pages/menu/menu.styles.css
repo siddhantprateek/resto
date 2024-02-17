@@ -15,10 +15,9 @@
   border: 1px solid rgb(150, 150, 150);
 }
 
-
 .icon {
   height: 1.5rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .search-it-icon {
@@ -28,12 +27,12 @@
 .search-input-field {
   width: 30rem;
   height: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none;
   border: none;
   background: transparent;
   font-size: 1.2rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .recipe-tag-container {
@@ -47,16 +46,16 @@
   justify-content: center;
 }
 .recipe-tag {
-  font-family: 'Dela Gothic One', cursive;
-  padding: .5rem 2rem;
+  font-family: "Dela Gothic One", cursive;
+  padding: 0.5rem 2rem;
   border-radius: 30px;
   border: 2px solid black;
   background-color: transparent;
   width: fit-content;
-  margin: .4rem;
+  margin: 0.4rem;
   /* width: fit-content; */
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .selected-recipe-tags {
@@ -66,15 +65,15 @@
 
 .selected-recipe-tag {
   background-color: #f9cb6f;
-  font-family: 'Dela Gothic One', cursive;
-  padding: .5rem 2rem;
+  font-family: "Dela Gothic One", cursive;
+  padding: 0.5rem 2rem;
   border-radius: 30px;
   border: 2px solid black;
   width: fit-content;
-  margin: .4rem;
+  margin: 0.4rem;
   /* width: fit-content; */
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .selected-recipe-tag:hover {
@@ -93,5 +92,3 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
-

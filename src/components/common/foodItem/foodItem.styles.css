@@ -5,12 +5,11 @@
   width: 100%;
   position: relative;
   margin-top: -6rem;
-  transition: all 2s; 
+  transition: all 2s;
 }
 
 .food-img:hover {
   transform: rotate(90deg);
-  
 }
 
 .food-item {
@@ -19,20 +18,18 @@
   /* height: 18rem; */
   width: 14rem;
   padding: 0 2rem;
-  margin: 4rem  2rem; 
+  margin: 4rem 2rem;
   border-radius: 10px;
-  transition: all .5s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
 .food-item:hover {
   background-color: rgba(255, 255, 255, 0.707);
-
 }
 
-
 .item-title-content {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   text-align: center;
   width: 10rem;
 }
@@ -49,11 +46,9 @@
 .food-details {
   display: flex;
   justify-content: space-between;
-  font-size: .7rem;
-  margin-top: -.5rem;
-  
+  font-size: 0.7rem;
+  margin-top: -0.5rem;
 }
-
 
 .food-details h3 {
   margin-top: -1rem;

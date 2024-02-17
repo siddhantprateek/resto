@@ -25,10 +25,8 @@
   padding: 0 2rem;
 }
 
-
-
 .nutri-info h1 {
-  line-height: .1rem;
+  line-height: 0.1rem;
 }
 
 .nutri-section-1,
@@ -51,16 +49,16 @@
 }
 
 .ing-tag {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   padding: 1rem 2rem;
   border-radius: 30px;
   border: 2px solid black;
   background-color: transparent;
   width: 100%;
-  margin: .5rem;
+  margin: 0.5rem;
   /* width: fit-content; */
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   z-index: 1;
   width: fit-content;
@@ -83,7 +81,7 @@
 
 .nutri-info p {
   font-weight: 800;
-  margin-top: -.4rem;
+  margin-top: -0.4rem;
 }
 
 .ingredients-items {

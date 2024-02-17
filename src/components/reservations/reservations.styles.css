@@ -14,11 +14,11 @@
 .phone-inp,
 .date-inp,
 .serves-inp {
-  color: rgba(0,0,0,.87);
-  border-bottom-color: rgba(0,0,0,.42);
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom-color: rgba(0, 0, 0, 0.42);
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: .009375em;
+  letter-spacing: 0.009375em;
   text-decoration: inherit;
   text-transform: inherit;
   align-self: flex-end;
@@ -31,18 +31,18 @@
   border-radius: 4px 4px 0 0;
   background: rgb(245, 245, 245);
   height: 56px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-right: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
 .special-inp {
-  color: rgba(0,0,0,.87);
-  border-bottom-color: rgba(0,0,0,.42);
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom-color: rgba(0, 0, 0, 0.42);
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: .009375em;
+  letter-spacing: 0.009375em;
   text-decoration: inherit;
   text-transform: inherit;
   align-self: flex-end;
@@ -55,7 +55,7 @@
   border-radius: 4px 4px 0 0;
   background: rgb(245, 245, 245);
   height: 56px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-right: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -81,7 +81,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -99,12 +99,11 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 98%;
-
 }
 
 .book-table-btn:hover,
 .book-table-btn:focus {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .time-slots {

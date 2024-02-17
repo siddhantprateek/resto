@@ -1,7 +1,6 @@
 /* Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek */
 
 .event-card {
-
   /* height: 10rem; */
   width: 60rem;
   margin: 2rem 0;
@@ -34,7 +33,9 @@
   align-items: center;
   padding: 0 2rem;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .event-left-footer {
@@ -47,13 +48,13 @@
 }
 
 .book-event-btn {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   background-color: #f9cb6f;
   padding: 1rem 2rem;
   border-radius: 30px;
   width: fit-content;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .book-event-btn:hover {

@@ -33,12 +33,12 @@ export interface ISustainability {
 
 export interface IUpcomingEvents {
   name: string;
-  date: string; 
+  date: string;
   description: string;
 }
 
 export interface IEvents {
-  upcoming_events: IUpcomingEvents[]
+  upcoming_events: IUpcomingEvents[];
 }
 
 export interface INutritionalInfo {
@@ -53,7 +53,7 @@ export interface MenuItem {
   description: string;
   price: number;
   ingredients: string[];
-  nutritional_info: INutritionalInfo
+  nutritional_info: INutritionalInfo;
   seasonal_availability: string[];
 }
 
@@ -63,7 +63,7 @@ export interface Restaurant {
   chef: IChef;
   awards: IAward[];
   ambiance: IAmbiance;
-  sustainability: ISustainability
+  sustainability: ISustainability;
   events: IEvents;
   online_presence: {
     website: string;

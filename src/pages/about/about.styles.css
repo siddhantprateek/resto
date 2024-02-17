@@ -35,7 +35,7 @@
 .mock-img {
   /* height: 30rem; */
   width: 16rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 .chef-v1-header {
   text-align: center;
@@ -60,7 +60,6 @@
   text-align: center;
 }
 
-
 .chef-custom-img {
   display: flex;
 
@@ -70,20 +69,18 @@
 .yellow-bar {
   width: 5rem;
   height: 15rem;
-  background-color: #FFCB66;
+  background-color: #ffcb66;
 }
 
 .blue-bar {
   width: 5rem;
   height: 23rem;
-  background-color: #42B9DF;
+  background-color: #42b9df;
 }
 
 .signature-dish {
   color: rgb(98, 98, 98);
 }
-
-
 
 .location-header h1 {
   font-size: 8rem;

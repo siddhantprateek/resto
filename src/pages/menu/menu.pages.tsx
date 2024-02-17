@@ -1,37 +1,48 @@
 // Author: Siddhant Prateek Mahanayak: github.com/siddhantprateek
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 // Internals
-import './menu.styles.css';
-import { RIGHTARW_ICON, SEARCHICON } from '../../assets';
-import RecipeItem from '../../components/common/recipeItem/recipeItem.common';
-import { createMockServer } from '../../mirage/createMockServer';
-import { MenuItem } from '../../mirage/types';
+import "./menu.styles.css";
+import { RIGHTARW_ICON, SEARCHICON } from "../../assets";
+import RecipeItem from "../../components/common/recipeItem/recipeItem.common";
+import { createMockServer } from "../../mirage/createMockServer";
+import { MenuItem } from "../../mirage/types";
 
+createMockServer();
 
-createMockServer()
-
-let FOOD_TAGS = ['Summer', 'Fall', 'Year-Round', 'Global Fusion Entrees', 'Epicurean Indulgences', 'Seasonal', 'Mango Tango Ceviche']
+let FOOD_TAGS = [
+  "Summer",
+  "Fall",
+  "Year-Round",
+  "Global Fusion Entrees",
+  "Epicurean Indulgences",
+  "Seasonal",
+  "Mango Tango Ceviche",
+];
 
 const Menu = () => {
   const [selectedTags, setSelectedTags] = useState(new Map());
-  const [items, setItems] = useState<MenuItem[]>()
-  const [ search, setSearch ] = useState<string>("")
+  const [items, setItems] = useState<MenuItem[]>();
+  const [search, setSearch] = useState<string>("");
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
-    setSearch(e.target.value)
-  }
+    e.preventDefault();
+    setSearch(e.target.value);
+  };
 
-  let SearchItems = items?.filter(item => 
-    item.name.toLowerCase().includes(search.toLowerCase()) ||
-    item.seasonal_availability[0].toLowerCase().includes(search.toLowerCase()) ||
-    item.ingredients.includes(search.toLowerCase()) ||
-    item.seasonal_availability[0].includes(Array.from(selectedTags.keys())[0])
+  let SearchItems = items?.filter(
+    (item) =>
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
+      item.seasonal_availability[0]
+        .toLowerCase()
+        .includes(search.toLowerCase()) ||
+      item.ingredients.includes(search.toLowerCase()) ||
+      item.seasonal_availability[0].includes(
+        Array.from(selectedTags.keys())[0],
+      ),
     // item.seasonal_availability[0].toLowerCase().includes(selectedTags.)
-  )
-  
+  );
 
   const handleTagClick = (tag: string) => {
     const newSelectedTags = new Map(selectedTags);
@@ -51,39 +62,43 @@ const Menu = () => {
 
   useEffect(() => {
     fetch("https://restaurant.service/api/food/menu")
-    .then((res) => res.json())
-    .then((json) => setItems(json.items))
-  }, [])
+      .then((res) => res.json())
+      .then((json) => setItems(json.items));
+  }, []);
 
   useEffect(() => {
     fetch(`https://restaurant.service/api/menu?season=Fall`)
-    .then((res) => res.json())
-    .then((json) => console.log("New Items", json.items))
-  }, [])
+      .then((res) => res.json())
+      .then((json) => console.log("New Items", json.items));
+  }, []);
 
   return (
-    <div className='menu-page'>
+    <div className="menu-page">
       <div className="menu-search-section">
         <div className="search-bar-container">
-          <img className='search-icon icon' src={SEARCHICON} alt="" />
+          <img className="search-icon icon" src={SEARCHICON} alt="" />
           <input
             type="text"
-            className='search-input-field'
-            placeholder='Looking for Something Delicious.'
+            className="search-input-field"
+            placeholder="Looking for Something Delicious."
             onChange={handleSearch}
-            name="" id="" />
-          <img className='search-it-icon icon' src={RIGHTARW_ICON} alt="" />
+            name=""
+            id=""
+          />
+          <img className="search-it-icon icon" src={RIGHTARW_ICON} alt="" />
         </div>
       </div>
 
       <div className="selected-recipe-container">
         <div className="selected-recipe-tags">
           {Array.from(selectedTags.keys()).map((tag) => (
-            <p 
-              key={tag} 
-              className='selected-recipe-tag'
+            <p
+              key={tag}
+              className="selected-recipe-tag"
               onClick={() => handleSelectedTagClick(tag)}
-              >{tag}</p>
+            >
+              {tag}
+            </p>
           ))}
         </div>
       </div>
@@ -93,7 +108,9 @@ const Menu = () => {
           {FOOD_TAGS.map((tag) => (
             <p
               key={tag}
-              className={`recipe-tag ${selectedTags.has(tag) ? 'selected' : ''}`}
+              className={`recipe-tag ${
+                selectedTags.has(tag) ? "selected" : ""
+              }`}
               onClick={() => handleTagClick(tag)}
             >
               {tag}
@@ -102,27 +119,23 @@ const Menu = () => {
         </div>
       </div>
 
-
       <div className="listed-food-items">
         <div className="listed-menu-grid-view">
-          {
-            SearchItems?.map((item: MenuItem) => (
-              <RecipeItem 
-                key={item.name}
-                name={item.name} 
-                description={item.description}
-                ingredients={item.ingredients}
-                nutritional_info={item.nutritional_info}
-                price={item.price}
-                seasonal_availability={item.seasonal_availability}  
-              />
-            ))
-          }
+          {SearchItems?.map((item: MenuItem) => (
+            <RecipeItem
+              key={item.name}
+              name={item.name}
+              description={item.description}
+              ingredients={item.ingredients}
+              nutritional_info={item.nutritional_info}
+              price={item.price}
+              seasonal_availability={item.seasonal_availability}
+            />
+          ))}
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
 export default Menu;
