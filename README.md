@@ -1,8 +1,14 @@
 ## Resto
 
+[![DeepSource](https://app.deepsource.com/gh/siddhantprateek/resto.svg/?label=code+coverage&show_trend=true&token=Zrz65MP7DF-jtD3zXrmlO0p7)](https://app.deepsource.com/gh/siddhantprateek/resto/)
+[![DeepSource](https://app.deepsource.com/gh/siddhantprateek/resto.svg/?label=active+issues&show_trend=true&token=Zrz65MP7DF-jtD3zXrmlO0p7)](https://app.deepsource.com/gh/siddhantprateek/resto/)
+[![DeepSource](https://app.deepsource.com/gh/siddhantprateek/resto.svg/?label=resolved+issues&show_trend=true&token=Zrz65MP7DF-jtD3zXrmlO0p7)](https://app.deepsource.com/gh/siddhantprateek/resto/)
+
 > Restaurant App - It's not just food , It's an experience. 😇
 
 ![](./assets/thumb2.png)
+
+[Code Coverage Report](https://app.deepsource.com/report/dc8ba39c-391c-4491-8598-77342accbd1f)
 
 ## Tech Stack
 
