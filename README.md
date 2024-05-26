@@ -16,6 +16,14 @@
 - `Typescript`
 - `Mirage Js` - Mock Server
 
+## Preview
+
+
+https://github.com/siddhantprateek/resto/assets/43869046/6fede505-0fd6-4518-bd7a-7235495e2509
+
+
+
+
 ## Objective
 
 - Within the menu, users have the option to filter items by searching for tag values or by conducting a regular search using item names. While the current selection of tags does not facilitate the desired data query, users can achieve a similar outcome through the search bar.
