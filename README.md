@@ -18,11 +18,7 @@
 
 ## Preview
 
-
 https://github.com/siddhantprateek/resto/assets/43869046/6fede505-0fd6-4518-bd7a-7235495e2509
-
-
-
 
 ## Objective
 
